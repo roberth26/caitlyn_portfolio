@@ -16,7 +16,7 @@ class Section extends AbstractComponent {
 			data-index="<?= $props[ 'index' ] ?>"
 			style="height:100vh">
 				<h1><?= $props[ 'post' ]->post_title ?></h1>
-				<h2>Section index: <?= $props[ 'index' ] ?></h2>
+				<p><?= apply_filters( 'the_content', $props[ 'post' ]->post_content ) ?></p>
 		</section>
 	<?php }
 }
